@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Loo uus instruktor</title>
+</head>
+<body>
+    <h1>Loo uus instruktor</h1>
+
+    <form method="POST" action="{{ route('instructors.store') }}">
+        @csrf
+
+        <label for="name">Nimi:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="phone">Telefon:</label>
+        <input type="text" name="phone" id="phone">
+
+        <button type="submit">Salvesta</button>
+    </form>
+</body>
+</html>

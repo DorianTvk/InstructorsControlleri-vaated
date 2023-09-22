@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Instruktori üksikasjad</title>
+</head>
+<body>
+    <h1>Instruktori üksikasjad</h1>
+
+    <p><strong>Nimi:</strong> {{ $instructor->name }}</p>
+    <p><strong>Email:</strong> {{ $instructor->email }}</p>
+    <p><strong>Telefon:</strong> {{ $instructor->phone }}</p>
+
+    <a href="{{ route('instructors.edit', ['id' => $instructor->id]) }}">Muuda</a>
+    <a href="{{ route('instructors.delete', ['id' => $instructor->id]) }}">Kustuta</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Muuda instruktorit</title>
+</head>
+<body>
+    <h1>Muuda instruktorit</h1>
+
+    <form method="POST" action="{{ route('instructors.update', ['id' => $instructor->id]) }}">
+        @csrf
+        @method('PUT')
+
+        <label for="name">Nimi:</label>
+        <input type="text" name="name" id="name" value="{{ $instructor->name }}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="{{ $instructor->email }}" required>
+
+        <label for="phone">Telefon:</label>
+        <input type="text" name="phone" id="phone" value="{{ $instructor->phone }}">
+
+        <button type="submit">Salvesta muudatused</button>
+    </form>
+</body>
+</html>
